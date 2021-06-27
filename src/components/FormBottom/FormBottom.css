@@ -1,8 +1,12 @@
 .FormBottomContainer{
     background-color: white;
     padding: 10px 0;
+    border-radius: 7px;
 }
-
+.FormBottomContainermobile{
+    display: none;
+    background-color: white;
+}
 .BottomInputContainers{
     display: flex;
     justify-content: space-evenly;
@@ -21,6 +25,14 @@
     width: 950px ;
 }
 
+#select{
+    background-color: rgb(0, 153, 255) !important;
+    color: white !important;
+}
+#notselect{
+    background-color: rgb(226, 226, 226) !important;
+    color: black !important;
+}
 .AdvanceBtnContainer{
     display: flex;
     width: 400px;
@@ -28,4 +40,66 @@
 }
 .AdvanceBtn{
     width: 180px !important;
+}
+
+@media (max-width:1150px ){
+    .AdvanceBtnContainer{
+        width: 320px;
+        padding-bottom: 20px;
+    }
+    .BottomInputContainers{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+    }
+    .AdvanceBtn{
+        width: 120px !important;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .FormBottomContainer{
+        background-color: white;
+        padding: 10px 0;
+        border-radius: 7px;
+        display: none;
+    }
+    .FormBottomContainermobile{
+        padding: 20px 0;
+        border-radius: 7px;
+        display: block;
+        background-color: white;
+    }
+}
+@media (max-width:1350px ){
+    .CommentContainers > table >tr > td > .MuiFormControl-root{
+        width: 700px ;
+    }
+    .CommentContainers > table > tr > td > .MuiFormControl-root > .MuiOutlinedInput-multiline{
+        width: 700px ;
+    }
+    .AdvanceBtn{
+        width: 120px !important;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .AdvanceBtnContainer{
+        display: flex;
+        width: 320px;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media (max-width:650px){
+    .AdvanceBtnContainer{
+        display: flex;
+        width: 200px;
+        justify-content: space-evenly;
+    }
+    .AdvanceBtn{
+        width: 80px !important;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

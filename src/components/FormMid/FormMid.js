@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField';
 import './FormMid.css'
 import Bundlecard from '../Bundlecard/Bundlecard';
 import { Button } from '@material-ui/core';
+import { useEffect } from 'react';
 
-function FormMid() {
+function FormMid({PartNum , Brand ,PartDesc ,Quantity ,setPartNum ,setBrand ,setPartDesc, setQuantity}) {
+    const [Messages, setMessages] = useState([]);
+    const [ID, setID] = useState("");
+
+    const addbundle = () => {
+        console.log(PartNum,Brand,PartDesc,Quantity)
+        setMessages([...Messages,{
+            id: Messages.length,
+            PartNum:PartNum,
+            Brand:Brand,
+            PartDesc:PartDesc,
+            Quantity:Quantity
+        }])
+        console.log(Messages.length)
+        setBrand("")
+        setPartDesc("")
+        setQuantity("")
+        setPartNum("")
+
+        // alert("added new bundle to the list")
+    }
+    const delbundle = ()=>{
+        setMessages(Messages.filter((item) => item.PartNum !== ID))
+    }
+
+    useEffect(() => {
+        delbundle()
+    }, [ID])
     return (
         <div className="FormMidContainer">
             <div className="MidInputContainers" >
@@ -15,31 +43,48 @@ function FormMid() {
                     </tr>
                     <tr>
                         <td>Part Number</td>
-                        <td> <TextField  variant="outlined" /></td>
+                        <td> <TextField value={PartNum} onChange={(e) => setPartNum(e.target.value)} variant="outlined" /></td>
                     </tr>
                     <tr>
                         <td>Brand</td>
-                        <td> <TextField  variant="outlined" /></td>
+                        <td> <TextField value={Brand} onChange={(e) => setBrand(e.target.value)} variant="outlined" /></td>
                     </tr>
                     <tr>
                         <td>Part Description</td>
-                        <td> <TextField variant="outlined" /></td>
+                        <td> <TextField value={PartDesc} onChange={(e) => setPartDesc(e.target.value)} variant="outlined" /></td>
                     </tr>
                     <tr>
                         <td>Quantity</td>
-                        <td> <TextField variant="outlined" /></td>
+                        <td> <TextField value={Quantity} onChange={(e) => setQuantity(e.target.value)} variant="outlined" /></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td> <Button className="SaveBundleBtn" variant="contained">+ Add Bundle</Button></td>
+                        <td> <Button onClick={addbundle} className="SaveBundleBtn" variant="contained">+ Add Bundle</Button></td>
+                    </tr>
+                    <tr className="special">
+                        <td></td>
+                        <td>
+                            {Messages?.sort((a, b) => a.id < b.id ? 1 : -1).map((data)=>{
+                                return(
+                                    <div key={data.PartNum}>
+                                        <Bundlecard data={data} setID={setID} />
+                                    </div>
+                                )
+                            })
+                    }</td>
                     </tr>
                     
                 </table>
                 <div className="BundleContainer" > 
-                    <Bundlecard/>
-                    <Bundlecard/>
-                    <Bundlecard/>
-                    <Bundlecard/>
+                    {Messages?.sort((a, b) => a.id < b.id ? 1 : -1).map((data)=>{
+                        return(
+                            <div key={data.PartNum}>
+                                <Bundlecard data={data} setID={setID} />
+                            </div>
+                        )
+                    })
+
+                    }
                 </div>
             </div>
         </div>

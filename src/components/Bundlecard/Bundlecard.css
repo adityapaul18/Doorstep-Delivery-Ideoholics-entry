@@ -14,3 +14,23 @@
     display: flex;
     justify-content: right
 }
+
+@media (max-width:1150px ){
+    .Bundlecard{
+        margin: 10px 0;
+    }
+}
+
+@media (max-width:650px ){
+    .Bundlecard{
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        background-color: rgba(207, 207, 207, 0.5);
+        margin-bottom: 20px;
+        margin-right: 20px;
+        border-radius: 8px;
+        padding: 5px;
+        border: 0.5px solid rgba(0, 0, 0, 0.623);
+    }
+}

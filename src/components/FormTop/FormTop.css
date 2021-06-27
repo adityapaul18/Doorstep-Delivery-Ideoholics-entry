@@ -2,7 +2,6 @@
     background-color: white;
     padding-bottom: 20px;
     border-radius: 7px;
-    
 }
 
 .FormtopHeader{
@@ -44,4 +43,58 @@ tr{
     display: flex;
     justify-content: right;
     align-items: center;
+} 
+
+@media (max-width:1350px ){
+    .MuiOutlinedInput-root{
+        width: 300px;
+    }
+}
+@media (max-width:1150px ){
+    .InputContainers{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .leftinputs{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding-right: 100px;
+    }
+    .rightinputs{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media (max-width:650px){
+    .MuiOutlinedInput-root{
+        width: 200px;
+    }
+    .MuiOutlinedInput-input{
+        padding:10px !important;
+    }
+    .rightinputs{
+        margin: 0;
+        padding-right: 0;
+        margin: auto;
+    }
+    .leftinputs{
+        margin: 0;
+        padding-right: 0;
+        margin: auto;
+    }
+    .FormtopHeader{
+        padding: 20px;
+        margin: 0;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+    }
 }
