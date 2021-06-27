@@ -1,0 +1,47 @@
+.FormtopContainer{
+    background-color: white;
+    padding-bottom: 20px;
+    border-radius: 7px;
+    
+}
+
+.FormtopHeader{
+    padding: 20px;
+    margin: 0;
+}
+
+.Divider{
+    border: 0.8px solid rgb(204, 204, 204);
+}
+
+.InputContainers{
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.MuiOutlinedInput-root{
+    width: 400px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.leftinputs{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.rightinputs{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding-right: 100px;
+}
+
+tr{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}

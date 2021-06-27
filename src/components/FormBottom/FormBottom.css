@@ -1,0 +1,31 @@
+.FormBottomContainer{
+    background-color: white;
+    padding: 10px 0;
+}
+
+.BottomInputContainers{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.CommentContainers{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.CommentContainers > table > tr > td > .MuiFormControl-root > .MuiOutlinedInput-multiline{
+    width: 950px ;
+}
+.CommentContainers > table >tr > td > .MuiFormControl-root{
+    width: 950px ;
+}
+
+.AdvanceBtnContainer{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+}
+.AdvanceBtn{
+    width: 180px !important;
+}

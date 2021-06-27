@@ -1,0 +1,16 @@
+.FormContainer{
+    background-color: rgb(223, 223, 223);
+    padding: 20px;
+}
+
+.SaveButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.SaveButton{
+    margin: 20px 50px !important;
+    background-color: rgb(0, 167, 245) !important;
+    color: white !important;
+}
