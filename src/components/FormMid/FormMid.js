@@ -9,7 +9,16 @@ function FormMid({PartNum , Brand ,PartDesc ,Quantity ,setPartNum ,setBrand ,set
     const [ID, setID] = useState("");
 
     const addbundle = () => {
-        console.log(PartNum,Brand,PartDesc,Quantity)
+        // console.log(PartNum,Brand,PartDesc,Quantity)
+        if (
+            PartNum === "" || !/\S/.test(PartNum) ||
+            Brand === "" || !/\S/.test(Brand) ||
+            PartDesc === "" || !/\S/.test(PartDesc) ||
+            Quantity === "" || !/\S/.test(Quantity) 
+          ) {
+            alert("plz fill in all the fields");
+            return;
+          }
         setMessages([...Messages,{
             partNumber:PartNum,
             brandName:Brand,
