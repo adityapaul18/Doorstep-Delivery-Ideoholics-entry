@@ -25,7 +25,25 @@ function Form() {
   const [Advancstat, setAdvancstat] = useState("false");
 
   const handlesubmit = () => {
-      
+      if (
+        DemandId === "" || !/\S/.test(DemandId) ||
+        Accname === "" || !/\S/.test(Accname) ||
+        RecipName === "" || !/\S/.test(RecipName) ||
+        Ordertype === "" || !/\S/.test(Ordertype) ||
+        DestType === "" || !/\S/.test(DestType) ||
+        ReccCont === "" || !/\S/.test(ReccCont) ||
+        PartNum === "" || !/\S/.test(PartNum) ||
+        Messages === "" || !/\S/.test(Messages) ||
+        Brand === "" || !/\S/.test(Brand) ||
+        PartDesc === "" || !/\S/.test(PartDesc) ||
+        Quantity === "" || !/\S/.test(Quantity) ||
+        OrderVal === "" || !/\S/.test(OrderVal) ||
+        Priority === "" || !/\S/.test(Priority) ||
+        Advancstat === "" || !/\S/.test(Advancstat)
+      ) {
+        alert("plz fill in all the fields");
+        return;
+      }
       const date = new Date();
       const sendingdata = {
       id: DemandId,

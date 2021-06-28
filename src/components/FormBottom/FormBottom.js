@@ -25,7 +25,7 @@ function FormBottom({DestAdd,setDestAdd, OrderVal,setOrderVal,Comment,setComment
                     </tr>
                     <tr>
                         <td>Order Value(Rs.)</td>
-                        <td> <TextField onChange={(e)=>setOrderVal(e.target.value)} variant="outlined" /></td>
+                        <td> <TextField type="number" onChange={(e)=>setOrderVal(e.target.value)} variant="outlined" /></td>
                     </tr> 
                 </table>
                 <table className="rightinputs">
@@ -62,7 +62,7 @@ function FormBottom({DestAdd,setDestAdd, OrderVal,setOrderVal,Comment,setComment
                     </tr>
                     <tr>
                         <td>Order Value(Rs.)</td>
-                        <td> <TextField onChange={(e)=>setOrderVal(e.target.value)} variant="outlined" /></td>
+                        <td> <TextField type="number" onChange={(e)=>setOrderVal(e.target.value)} variant="outlined" /></td>
                     </tr>
                     <tr>
                         <td>Case Priority</td>

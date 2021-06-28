@@ -53,7 +53,7 @@ function FormMid({PartNum , Brand ,PartDesc ,Quantity ,setPartNum ,setBrand ,set
                     </tr>
                     <tr>
                         <td>Quantity</td>
-                        <td> <TextField value={Quantity} onChange={(e) => setQuantity(e.target.value)} variant="outlined" /></td>
+                        <td> <TextField value={Quantity} type="number" onChange={(e) => setQuantity(e.target.value)} variant="outlined" /></td>
                     </tr>
                     <tr>
                         <td></td>
