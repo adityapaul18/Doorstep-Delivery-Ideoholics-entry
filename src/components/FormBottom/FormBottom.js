@@ -6,11 +6,11 @@ import { Button, MenuItem } from '@material-ui/core';
 function FormBottom({DestAdd,setDestAdd, OrderVal,setOrderVal,Comment,setComment,Priority,setPriority,Advancstat,setAdvancstat}) {
     const [Adv, setAdv] = useState(false);
     const setadv1 = () => {
-        setAdvancstat(true)
+        setAdvancstat("true")
         setAdv(true)
     }
     const setadv2 = () => {
-        setAdvancstat(false)
+        setAdvancstat("false")
         setAdv(false)
     }
 

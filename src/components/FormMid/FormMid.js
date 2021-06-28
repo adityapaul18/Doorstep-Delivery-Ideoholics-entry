@@ -5,18 +5,16 @@ import Bundlecard from '../Bundlecard/Bundlecard';
 import { Button } from '@material-ui/core';
 import { useEffect } from 'react';
 
-function FormMid({PartNum , Brand ,PartDesc ,Quantity ,setPartNum ,setBrand ,setPartDesc, setQuantity}) {
-    const [Messages, setMessages] = useState([]);
+function FormMid({PartNum , Brand ,PartDesc ,Quantity ,setPartNum ,setBrand ,setPartDesc, setQuantity,Messages, setMessages}) {
     const [ID, setID] = useState("");
 
     const addbundle = () => {
         console.log(PartNum,Brand,PartDesc,Quantity)
         setMessages([...Messages,{
-            id: Messages.length,
-            PartNum:PartNum,
-            Brand:Brand,
-            PartDesc:PartDesc,
-            Quantity:Quantity
+            partNumber:PartNum,
+            brandName:Brand,
+            partDescription:PartDesc,
+            quantity:Quantity
         }])
         console.log(Messages.length)
         setBrand("")
@@ -27,7 +25,7 @@ function FormMid({PartNum , Brand ,PartDesc ,Quantity ,setPartNum ,setBrand ,set
         // alert("added new bundle to the list")
     }
     const delbundle = ()=>{
-        setMessages(Messages.filter((item) => item.PartNum !== ID))
+        setMessages(Messages.filter((item) => item.partNumber !== ID))
     }
 
     useEffect(() => {
