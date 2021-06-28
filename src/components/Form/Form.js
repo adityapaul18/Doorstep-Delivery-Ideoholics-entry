@@ -66,7 +66,7 @@ function Form() {
     axios.post('http://cloud.ideoholics.com:8006/parts-delivery/delivery-request/create' , sendingdata)
     .then(response => {
         console.log(alert(" request success"))
-    }).catch(error => console.log(error.message))
+    }).catch(error => console.log(alert("invalid request")))
 
     // console.log(DestAdd, OrderVal, Comment, Priority, Advancstat);
   };
